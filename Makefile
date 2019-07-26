@@ -1,9 +1,9 @@
 
 main: main.cpp
-	g++ -pthread -o main main.cpp -lgtest -lPocoFoundation
+	g++ -pthread -o main main.cpp -lgtest -lPocoFoundation -lgcov -fprofile-arcs -ftest-coverage
 
 clean:
-	@rm -f main *.o *.a *.so lib* app_*
+	@rm -f main *.o *.a *.so lib* app_* *.g???
 
 helper.o: helper.cpp
 	g++ -fPIC -Wall -c helper.cpp
