@@ -1,6 +1,9 @@
 
-main: main.cpp
-	g++ -pthread -o main main.cpp -lgtest -lPocoFoundation -lgcov -fprofile-arcs -ftest-coverage
+main: main.cpp libhelper.so
+	g++ -pthread -o main main.cpp -lPocoFoundation -lgtest -lgcov -fprofile-arcs -ftest-coverage -L. -lhelper 
+	@echo "************************************************************************"
+	@echo "TODO:"
+	@echo 'export LD_LIBRARY_PATH=$${LD_LIBRARY_PATH}:.'
 
 clean:
 	@rm -f main *.o *.a *.so lib* app_* *.g???
@@ -21,4 +24,8 @@ app_dynamic: app.cpp libhelper.so
 app_static: app.cpp helper.a
 	g++ -o app_static app.cpp helper.a
 
-.PHONY: clean
+xxx:
+	@echo "***** TODO ******"
+	@echo 'export x=$${LD_LIBRARY_PATH}:.'
+
+.PHONY: clean 

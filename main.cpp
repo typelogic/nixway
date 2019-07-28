@@ -8,6 +8,8 @@
 #include <Poco/File.h>
 #include <Poco/TemporaryFile.h>
 
+int addnum (int,int);
+
 class Fixture : public ::testing::Test
 {
 public:
@@ -38,6 +40,8 @@ TEST(Poco, Test1)
     {
         FAIL();
     }
+
+    ASSERT_TRUE(addnum(3,4) == 7);
 }
 
 TEST_F(Fixture, Test2)
