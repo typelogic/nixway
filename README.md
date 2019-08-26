@@ -8,3 +8,5 @@ Also, check `echo $NIX_CFLAGS_COMPILE`
 # Poco/Boost C++
 In your shell manually run, `nix-shell -p gcc boost poco`
 Then compile `prog.cpp` by: `c++ -o prog prog.cpp -lPocoFoundation -lboost_system`
+
+TIP: Running `./prog` can be done even outside of `nix-shell`
