@@ -10,3 +10,6 @@ In your shell manually run, `nix-shell -p gcc boost poco`
 Then compile `prog.cpp` by: `c++ -o prog prog.cpp -lPocoFoundation -lboost_system`
 
 TIP: Running `./prog` can be done even outside of `nix-shell`
+
+Another way, using `default.nix` is by running from the shell: `nix-build`. The
+executable output is in `result` symlink folder
