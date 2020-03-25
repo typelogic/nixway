@@ -1,0 +1,9 @@
+syntax = "proto3";
+package example;
+option java_package = "org.test";
+option java_multiple_files = true;
+
+message Info {
+    bytes face = 1;
+    string pin = 2;
+}
